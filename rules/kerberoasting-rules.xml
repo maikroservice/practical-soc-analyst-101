@@ -1,0 +1,27 @@
+<group name="windows, ad,">
+  <rule id="150001" level="12">
+    <if_sid>60103</if_sid>
+    <field name="win.system.eventID">^4769$</field>
+    
+    <!-- rubeus specific --> 
+    <field name="win.eventdata.ticketOptions" type="pcre2">0x40800000</field>
+    <field name="win.eventdata.ticketEncryptionType" type="pcre2">0x17</field>
+     
+    <!-- <options>no_full_log</options> -->
+    <description>Possible rubeus Kerberoasting attack</description>
+  </rule>
+  
+  <rule id="150002" level="12">
+    <if_sid>60103</if_sid>
+    <field name="win.system.eventID">^4769$</field>
+    
+    <!-- impacket specific --> 
+    <field name="win.eventdata.ticketOptions" type="pcre2">0x40810010</field>
+    <field name="win.eventdata.ticketEncryptionType" type="pcre2">0x17</field>
+    <options>no_full_log</options>
+    <description>Possible impacket Kerberoasting attack</description>
+  </rule>
+</group>
+
+
+
