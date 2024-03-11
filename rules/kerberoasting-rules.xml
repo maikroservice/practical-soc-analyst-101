@@ -7,7 +7,7 @@
     <field name="win.eventdata.ticketOptions" type="pcre2">0x40800000</field>
     <field name="win.eventdata.ticketEncryptionType" type="pcre2">0x17</field>
      
-    <!-- <options>no_full_log</options> -->
+    <options>no_full_log</options>
     <description>Possible rubeus Kerberoasting attack</description>
   </rule>
   
