@@ -1,0 +1,13 @@
+<!-- custom powershell events -->
+<group name="windows, powershell, ">
+  <rule id="100014" level="12">
+    <field name="win.eventdata.scriptBlocktext" type="pcre2">(?i)set-mppreference</field>
+    <description>PowerShell set-mppreference executed!</description>
+    <options>no_full_log</options>
+  </rule>
+  <rule id="100015" level="12">
+    <field name="win.eventdata.scriptlockText" type="pcre2">(?i)-exclusionextension</field>
+    <description>PowerShell set-mppreference exclusionextension executed!</description>
+    <options>no_full_log</options>
+  </rule>
+</group>
